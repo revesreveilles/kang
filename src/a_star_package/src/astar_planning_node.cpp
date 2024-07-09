@@ -253,16 +253,16 @@ void MapClass::MapCallback(const nav_msgs::msg::OccupancyGrid::SharedPtr msg){
 		}
 	}
 }
-void InitPoseCallback(const geometry_msgs::msg::PoseWithCovariance msg){
+void InitPoseCallback(const geometry_msgs::msg::PoseWithCovariance::SharedPtr msg){
 	init_pose_point[0] = 1;
-    init_pose_point[1] = msg.pose.position.x;
-    init_pose_point[2] = msg.pose.position.y;
+    init_pose_point[1] = msg->pose.position.x;
+    init_pose_point[2] = msg->pose.position.y;
 
 }
-void GoalPoseCallback(const geometry_msgs::msg::PoseStamped msg){
+void GoalPoseCallback(const geometry_msgs::msg::PoseStamped::SharedPtr msg){
 	goal_pose_point[0] = 1;
-    goal_pose_point[1] = msg.pose.position.x;
-    goal_pose_point[2] = msg.pose.position.y;
+    goal_pose_point[1] = msg->pose.position.x;
+    goal_pose_point[2] = msg->pose.position.y;
 }
 
 
@@ -281,11 +281,16 @@ int main(int argc, char *argv[])
         "/map", 10, [&](const nav_msgs::msg::OccupancyGrid::SharedPtr msg) {
             mapclass.MapCallback(msg);
         });
-	auto pose_sub =node ->create_subscription<geometry_msgs::msg::Pose>("/initialpose",10,
-		[&](const geometry_msgs::msg::Pose::SharedPtr pose)
+	auto initpose_sub =node ->create_subscription<geometry_msgs::msg::PoseWithCovariance>("/initialpose",10,
+		[&](const geometry_msgs::msg::PoseWithCovariance::SharedPtr ipose)
 		{
-			InitPoseCallback(pose);
+			InitPoseCallback(ipose);
 		});
+	auto goalpose_sub =node ->create_subscription<geometry_msgs::msg::PoseStamped>("/goallpose",10,
+	[&](const geometry_msgs::msg::PoseStamped::SharedPtr gpose)
+	{
+		GoalPoseCallback(gpose);
+	});
     // 创建路径发布者
     auto path_pub = node->create_publisher<nav_msgs::msg::Path>("path_Astar", 10);
 
