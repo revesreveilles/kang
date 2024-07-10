@@ -9,7 +9,7 @@ ssh-keygen -t rsa -C "your@email.com"
 ## 添加ssh认证
 1. <a herf=https://github.com//>点击进入Github</a>.
 2. 点击头像-->`SSH adn GPG keys`-->'New SSH key'-->
-`ssh-keygen -t rsa -C "your@email.com"`生成的密钥默认存放于`/home/<username>/.ssh`,复制`id_rsa.pub`内的全部内容上去，点击`Generate new ssh key`
+在终端输入`ssh-keygen -t rsa -C "your@email.com"`生成的密钥默认存放于`/home/<username>/.ssh`,复制`id_rsa.pub`内的全部内容上去，点击`Generate new ssh key`
 ```
 git checkout -b <分支名>
 git remote add <remote名> <要加入的远程仓库的SSH>
