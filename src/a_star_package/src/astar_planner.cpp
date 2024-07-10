@@ -19,6 +19,8 @@ namespace astar_planner{
                     std::shared_ptr<tf2_ros::Buffer> tf,
                     std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros)
     {
+      (void) name;
+      (void) tf;
       if(!initialized_)
       {
         auto node = parent.lock();
@@ -107,7 +109,7 @@ namespace astar_planner{
           }
           //Get neighbors
           std::vector<int> neighborIndexes =getNeighbors(currentNode.index);
-          for(int i=0;i<neighborIndexes.size();i++)
+          for(size_t i=0;i<neighborIndexes.size();i++)
           {
             if(cameFrom[neighborIndexes[i]]==-1)
             {
@@ -253,7 +255,7 @@ int main(int argc, char **argv)
 
     auto astar_planner = std::make_shared<astar_planner::AstarPlanner>();
     
-    // rclcpp::spin(astar_planner);
+    rclcpp::spin(planner_node);
 
     rclcpp::shutdown();
     return 0;
