@@ -17,3 +17,10 @@ git add <提交文件名>
 git commit -m "提交描述"
 git push --set-upstream <remote名> <分支名>
 ```
+## 可能的错误
+1. 尝试连接时发生错误：sign_and_send_pubkey: signing failed for RSA "/home/xxx/.ssh/id_rsa" from agent: agent refused operation
+在终端输入：ssh-add ~/.ssh/id_rsa
+若发生以下报错：Permissions 0775 for '/home/g/.ssh/id_rsa' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+执行：chmod 600 ~/.ssh/id_rsa
