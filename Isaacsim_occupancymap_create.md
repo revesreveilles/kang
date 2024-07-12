@@ -13,5 +13,5 @@
    - 如果生成的占据栅格地图为全白，首先确认是否为物体添加物理碰撞属性，再点击`CALCULATE`,添加物理属性操作如下：在`Stage`栏中右键物体，点击`Add`-->`physics`-->`Rigid body with colliders preset`。
     - 如果仍为空白，则在`Stage`栏中右键`GroundPlane`，选择`Deactivate`。
 6. 在`Visualization`页面中，`Coordinate`栏选择`Yaml`类型，点击`RE-GENERATE IMAGE`：
-![Visualization](image-13.png)
+![Visualization](Example_map.png)
 复制文本栏内的内容到`.yaml`地图文件内，再`Save Image`即可。
