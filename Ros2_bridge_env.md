@@ -76,7 +76,6 @@
   </profiles>
   ```
   2. 在每个需要使用ROS2功能的终端输入:
-   <font color=#DC143C>export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml</font> 
-   使用`omniverse launcher`时设置如下：
-   ![alt text](image-8.png)
-   3. Source your ROS 2 installation and workspace before launching Isaac Sim
+   <font color=#DC143C>export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml</font> 使用`omniverse launcher`时设置如图所示：
+    ![alt text](image-8.png)
+  3. Source your ROS 2 installation and workspace before launching Isaac Sim
