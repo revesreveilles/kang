@@ -1,6 +1,6 @@
 ## Isaac Sim安装
-- 下载并安装<a herf="https://www.nvidia.com/en-us/omniverse"/>Omniverse Launcher</a>.
-- 在Omniverse Launcher中安装<a herf="https://docs.omniverse.nvidia.com/nucleus/latest/workstation/installation.html"/>Nucleus</a>.
+- 下载并安装<a herf="https://www.nvidia.com/en-us/omniverse">Omniverse Launcher</a>.
+- 在Omniverse Launcher中安装<a herf="https://docs.omniverse.nvidia.com/nucleus/latest/workstation/installation.html">Nucleus</a>.
   >!!!Note
   >1. 将<font color=red> omniverse-launcher-linux.AppImage</font>移动至文件夹中防止误删除.
   >2. 输入<font color=red>sudo chmod +x omniverse-launcher-linux.AppImage</font> 添加权限.
