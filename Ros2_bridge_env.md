@@ -19,7 +19,7 @@
     # For rosdep install command
     sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
     # For colcon build command
-    sudo apt install        python3-colcon-common-extensions
+    sudo apt install python3-colcon-common-extensions
   ```
   1. Resolve any package dependencies from the root of the ROS 2 workspace by running the following command:
     ```
