@@ -1,5 +1,5 @@
 ## Isaac Sim安装
-- 下载并安装<a herf="https://www.nvidia.com/en-us/omniverse">Omniverse Launcher</a>.
+- 下载并安装[Omniverse Launcher](https://www.nvidia.com/en-us/omniverse)
 - 在Omniverse Launcher中安装<a herf="https://docs.omniverse.nvidia.com/nucleus/latest/workstation/installation.html">Nucleus</a>.
   >!!!Note
   >1. 将<font color=red> omniverse-launcher-linux.AppImage</font>移动至文件夹中防止误删除.
@@ -13,7 +13,7 @@
 1. Source ROS环境
 将`source /opt/ros/humble/setup.bash`加入至`~/.bashrc`中
 ### 启用ROS2 Bridge
-- <font color=red size=5 face="微软雅黑">I.</font>使用官方的Ros2工作空间<a herf="https://github.com/isaac-sim/IsaacSim-ros_workspaces.git">IsaacSim-ros_workspaces</a>
+- <font color=red size=5 face="微软雅黑">I.</font>使用官方的Ros2工作空间[IsaacSim-ros_workspaces](https://github.com/isaac-sim/IsaacSim-ros_workspaces.git)
   1. To build the ROS 2 workspace, you might need to install additional packages:
   ```
     # For rosdep install command
@@ -46,7 +46,7 @@
     `ros2 run isaac_tutorials ros2_publisher.py`
 
 - <font color=red size=5 face="微软雅黑">II.</font>使用非官方工作空间：
-  1. 在`~/.ros/`下创建`fastdds.xml`文件,将<a herf="https://github.com/isaac-sim/IsaacSim-ros_workspaces.git">IsaacSim-ros_workspaces</a>内的`fastdds.xml`内容复制过去
+  1. 在`~/.ros/`下创建`fastdds.xml`文件,将[IsaacSim-ros_workspaces]("https://github.com/isaac-sim/IsaacSim-ros_workspaces.git)内的`fastdds.xml`内容复制过去
   ```xml
   <?xml version="1.0" encoding="UTF-8" ?>
 
