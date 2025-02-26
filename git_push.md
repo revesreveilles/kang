@@ -13,3 +13,8 @@ git branch --set-upstream-to=<remote_name>/<branch_name>
 # 指定远程分支
 git pull --rebase <remote_name> <branch_name>
 ```
+## 提交分支出现鉴权错误
+在setting->dev-setting->generate token
+```
+password：your_token
+```
